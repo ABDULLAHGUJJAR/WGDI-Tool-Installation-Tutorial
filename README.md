@@ -15,7 +15,7 @@ Bioconda is a bioinformatics package repository for Conda, a package manager pri
 
 WGDI relies on several third-party software packages for certain functionalities. These dependencies should be installed on your system before using WGDI. 
 
-      PAML: https://anaconda.org/bioconda/paml
+PAML: https://anaconda.org/bioconda/paml
       MAFFT: https://anaconda.org/bioconda/mafft
       MUSCLE: https://anaconda.org/bioconda/muscle
       PAL2NAL: https://anaconda.org/bioconda/pal2nal
