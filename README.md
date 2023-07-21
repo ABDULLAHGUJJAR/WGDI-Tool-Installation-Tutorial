@@ -78,3 +78,32 @@ Script: rundiamond.py
 This script runs a BLAST search using the diamond program. It takes two input FASTA files, pyu.pep.fasta (generated in Step 3) and cor.pep.fasta from the cor directory. The database used for the search is named dbpycor, and the BLAST output is saved in the file pyu_cor.blast in the m6 format.
 Please ensure that you have the required input files (Pyun.gff3, pyun.pep, Pyun.cds, pyu.gff, pyu.pep, and cor.pep.fasta) and the Python scripts (01.getgff.py, 02.gff_lens.py, 03.seq_newname.py, and rundiamond.py) in the correct locations before running these commands. Also, make sure you have the necessary dependencies installed for the Python scripts to work properly.
 
+
+# 05. dotplot
+
+local.conf
+
+       [dotplot]
+       blast = ../blast/pyu_cor.blast 
+       gff1 =  ../pyu.gff
+       gff2 =  ../../cor/cor.gff
+       lens1 = ../pyu.lens
+       lens2 = ../../cor/cor.lens
+       genome1_name =  pyu
+       genome2_name =  cor
+       multiple  = 2
+       score = 100
+       evalue = 1e-5
+       repeat_number = 2
+       position = order
+       blast_reverse = false
+       ancestor_left = none
+       ancestor_top = none
+       markersize = 1
+       figsize = 10,10
+       savefig = pyu_cor.dotplot.order.local.pdf
+
+
+# command
+
+                     wgdi -d local.conf
