@@ -57,7 +57,7 @@ This script takes a GFF3 file named Pyun.gff3 as input and converts it into BED 
 # Step 2: Convert BED format to WGDI required format
 Script: 02.gff_lens.py
                                           
-                                          python 02.gff_lens.py pyu.gff pyu pyu.gff pyu.lens
+                                          python 02.gff_lens.py pyu.bed pyu pyu.gff pyu.lens
 ## Explanation:
 This script takes the pyu.gff file (generated in Step 1) and converts it into the WGDI required format, assigning new names to genes and determining the order. It also creates a karyotype file named pyu.lens, containing chromosome names, lengths, and genes.
 
